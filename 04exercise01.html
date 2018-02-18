@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Date and Time</title>
+    <style>
+        p {font: 14px normal arial, verdana, helvetica;}
+    </style>
+<!--  Example of output from various date methods     -->
+    <script>
+        function telltime() {
+            var out = "";
+            var now = new Date();
+            out += "<br />toDateString(): " + now.toDateString();
+            out += "<br />toLocaleDateString(): " + now.toLocaleDateString();
+            out += "<br />toLocaleString(): " + now.toLocaleString();
+            out += "<br />toString(): " + now.toString();
+            out += "<br />toUTCString(): " + now.toUTCString();
+
+            document.getElementById("div1").innerHTML = out;
+        }
+    </script>
+</head>
+<body>
+    <h1>Date Methods</h1><br />
+    The current date and time is:<br />
+    <div id="div1"></div>
+    <script>
+        telltime();
+    </script>
+    <input type="button" onclick="location.reload()" value="Refresh" />
+</body>
+</html>

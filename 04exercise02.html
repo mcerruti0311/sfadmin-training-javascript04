@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Use the Math object to write a function to return the volume of a round
+ chimney, given its radius and height in meters as arguments. The volume
+ returned should be rounded up to the nearest cubic meter. -->
+
+ <!-- volume of a cylinder = pi x radius cubed -->
+
+<html>
+<head>
+    <title>Volume of a Chimney</title>
+    <style>
+        p {font: 14px normal arial, verdana, helvetica;}
+    </style>
+<!--  Example of output from various date methods     -->
+    <script>
+        function tellChimneyVolume(radius, height) {
+          var pi = Math.PI;
+          var rSquared = Math.pow(radius, 2);
+          var volume = pi * rSquared * height;
+          var cube = "3";
+          var squared ="2";
+          var piCharacter = String.fromCharCode(960);
+          var out = "<br /> radius" + squared.sup() + " * height * "
+            + piCharacter;
+
+          out += "<br /> radius" + squared.sup() + ": " + rSquared;
+          out += "<br /> height: " + height;
+          out += "<br /> PI: " + pi.toFixed(7);
+          out += "<br />The Volume is: " + volume.toFixed(4);
+          out += " feet" + cube.sup() + ".";
+          document.getElementById("div1").innerHTML = out;
+        }
+    </script>
+</head>
+<body>
+    <h1>Chimney Volume</h1><br />
+    The volume of the chimney with radius of 2ft and height of 20ft is:<br />
+    <div id="div1"></div>
+    <script>
+        tellChimneyVolume(2, 20);
+    </script>
+</body>
+</html>
